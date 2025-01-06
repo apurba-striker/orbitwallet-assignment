@@ -1,8 +1,8 @@
-\# Node.js Transaction API
+# Node.js Transaction API
 
 A Node.js backend application to manage users and transactions, using MongoDB for data storage.
 
-\## Features
+## Features
 
 \- Fetch user details by ID.
 
@@ -16,15 +16,15 @@ A Node.js backend application to manage users and transactions, using MongoDB fo
 
 \---
 
-\## Installation
+## Installation
 
-\### 1. Clone the Repository
+### 1. Clone the Repository
 
-\`\`\`bash
+```bash
 
 git clone https://github.com/apurba-striker/orbitwallet-assignment/tree/main/backend
 
-cd backend
+cd backend ```
 
 ### 2\. Install Dependencies
 
