@@ -15,6 +15,8 @@ A Node.js backend application to manage users and transactions, using MongoDB fo
 \- MongoDB aggregation framework for efficient queries.
 
 \---
+## Deployed Link
+https://assignmentbackend-cb2e.onrender.com
 
 ## Installation
 
@@ -64,15 +66,16 @@ API Endpoints
 **Example Request:**
 
 ```bash
- GET /api/users/64b33d8a9b32df10d00f9d01 
+ GET /api/users/677986bd309c89cd628f0f3a
  ```
 
 **Response:**
 
 ```bash
-{    "_id": "64b33d8a9b32df10d00f9d01",
-"name": "user10",
-"phoneNumber": "1234567890"  }
+{   "_id": "677986bd309c89cd628f0f3a",
+  "name": "User1",
+  "phoneNumber": "1234567891",
+  "__v": 0  }
 ```
 
 ### 2\. Get All Transactions for a User
@@ -98,18 +101,29 @@ API Endpoints
 **Example Request:**
 
 ```bash
- GET /api/transactions/user/64b33d8a9b32df10d00f9d01?status=success&type=debit&from=2023-12-01&to=2023-12-31&page=1&limit=5
+ GET api/transactions/user/677986bd309c89cd628f0f43?status=success&type=debit&from=2025-01-04&to=2025-12-31&page=1&limit=5
  ```
 
 **Response:**
 
 ```bash
-[    {      "_id": "64b33d8a9b32df10d00f9d02",      "status": "success",      "type": "debit",      "transactionDate": "2023-12-15T00:00:00.000Z",      "amount": 500,      "userId": "64b33d8a9b32df10d00f9d01"    }  ]  
+[
+  {
+    "_id": "677986bd309c89cd628f0f72",
+    "status": "success",
+    "type": "debit",
+    "transactionDate": "2025-01-04T19:06:37.963Z",
+    "amount": 361.945886449063,
+    "userId": "677986bd309c89cd628f0f43",
+    "__v": 0
+  }
+]
 ```
 
 ### 3\. Get All Transactions with User Details
 
-**Endpoint:** GET /api/transactions/all**Description:** Fetch all transactions with associated user details.
+**Endpoint:** GET /api/transactions/all
+**Description:** Fetch all transactions with associated user details.
 
 **Query Parameters:**
 
@@ -131,7 +145,7 @@ GET /api/transactions/all?status=success&type=credit&page=1&limit=5
 **Response:**
 
 ```bash
-[    {      "_id": "64b33d8a9b32df10d00f9d02",      "status": "success",      "type": "credit",      "transactionDate": "2023-12-15T00:00:00.000Z",      "amount": 1000,      "userId": "64b33d8a9b32df10d00f9d01",      "userDetails": {        "_id": "64b33d8a9b32df10d00f9d01",        "name": "John Doe",        "phoneNumber": "1234567890"      }    }  ]   
+[    {      "_id": "64b33d8a9b32df10d00f9d02",      "status": "success",      "type": "credit",      "transactionDate": "2023-12-15T00:00:00.000Z",      "amount": 1000,      "userId": "64b33d8a9b32df10d00f9d01",      "userDetails": {        "_id": "64b33d8a9b32df10d00f9d01",        "name": "user10",        "phoneNumber": "1234567890"      }    }  ]   
 ```
 
 Error Responses
