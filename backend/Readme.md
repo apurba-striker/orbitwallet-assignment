@@ -20,15 +20,16 @@ A Node.js backend application to manage users and transactions, using MongoDB fo
 
 ### 1. Clone the Repository
 
-`
-
-git clone https://github.com/apurba-striker/orbitwallet-assignment/tree/main/backend
-
-cd backend `
+```bash
+  git clone https://github.com/apurba-striker/orbitwallet-assignment/tree/main/backend
+  cd backend
+```
 
 ### 2\. Install Dependencies
 
-`   npm install   `
+```bash
+ npm install
+ ```
 
 ### 3\. Set Up MongoDB
 
@@ -39,7 +40,9 @@ cd backend `
 
 ### 4\. Run the Server
 
-`   npm start   `
+```bash
+ npm start 
+ ```
 
 The server will run on http://localhost:5000.
 
@@ -60,11 +63,17 @@ API Endpoints
 
 **Example Request:**
 
-`   GET /api/users/64b33d8a9b32df10d00f9d01   `
+```bash
+ GET /api/users/64b33d8a9b32df10d00f9d01 
+ ```
 
 **Response:**
 
-`{    "_id": "64b33d8a9b32df10d00f9d01",    "name": "John Doe",    "phoneNumber": "1234567890"  }`
+```bash
+{    "_id": "64b33d8a9b32df10d00f9d01",
+"name": "user10",
+"phoneNumber": "1234567890"  }
+```
 
 ### 2\. Get All Transactions for a User
 
@@ -88,11 +97,15 @@ API Endpoints
 
 **Example Request:**
 
-`   GET /api/transactions/user/64b33d8a9b32df10d00f9d01?status=success&type=debit&from=2023-12-01&to=2023-12-31&page=1&limit=5   `
+```bash
+ GET /api/transactions/user/64b33d8a9b32df10d00f9d01?status=success&type=debit&from=2023-12-01&to=2023-12-31&page=1&limit=5
+ ```
 
 **Response:**
 
-`   code[    {      "_id": "64b33d8a9b32df10d00f9d02",      "status": "success",      "type": "debit",      "transactionDate": "2023-12-15T00:00:00.000Z",      "amount": 500,      "userId": "64b33d8a9b32df10d00f9d01"    }  ]   `
+```bash
+[    {      "_id": "64b33d8a9b32df10d00f9d02",      "status": "success",      "type": "debit",      "transactionDate": "2023-12-15T00:00:00.000Z",      "amount": 500,      "userId": "64b33d8a9b32df10d00f9d01"    }  ]  
+```
 
 ### 3\. Get All Transactions with User Details
 
@@ -111,11 +124,15 @@ API Endpoints
 
 **Example Request:**
 
-`   GET /api/transactions/all?status=success&type=credit&page=1&limit=5   `
+```bash
+GET /api/transactions/all?status=success&type=credit&page=1&limit=5 
+```
 
 **Response:**
 
-`   code[    {      "_id": "64b33d8a9b32df10d00f9d02",      "status": "success",      "type": "credit",      "transactionDate": "2023-12-15T00:00:00.000Z",      "amount": 1000,      "userId": "64b33d8a9b32df10d00f9d01",      "userDetails": {        "_id": "64b33d8a9b32df10d00f9d01",        "name": "John Doe",        "phoneNumber": "1234567890"      }    }  ]   `
+```bash
+[    {      "_id": "64b33d8a9b32df10d00f9d02",      "status": "success",      "type": "credit",      "transactionDate": "2023-12-15T00:00:00.000Z",      "amount": 1000,      "userId": "64b33d8a9b32df10d00f9d01",      "userDetails": {        "_id": "64b33d8a9b32df10d00f9d01",        "name": "John Doe",        "phoneNumber": "1234567890"      }    }  ]   
+```
 
 Error Responses
 ---------------
