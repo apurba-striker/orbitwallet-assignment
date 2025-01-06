@@ -1,4 +1,4 @@
-# Node.js Transaction API
+# Node.js Backend API
 
 A Node.js backend application to manage users and transactions, using MongoDB for data storage.
 
