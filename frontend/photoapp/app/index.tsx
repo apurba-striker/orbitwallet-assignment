@@ -20,9 +20,9 @@ const HomeScreen: React.FC = () => (
   </View>
 );
 
-const SettingsScreen: React.FC = () => (
+const UserScreen: React.FC = () => (
   <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text>Settings Screen</Text>
+    <Text>User Screen</Text>
   </View>
 );
 
@@ -40,17 +40,17 @@ const App: React.FC = () => {
               iconName = 'search';
             } else if (route.name === 'Profile') {
               iconName = 'users';
-            } else if (route.name === 'Settings') {
-              iconName = 'settings';
+            } else if (route.name === 'User') {
+              iconName = 'cog';
             }
             return <FontAwesome5 name={iconName} size={24} color="#333" />;
           },
         })}
       >
       <Tab.Screen name="Home" component={HomeScreen}/>
-      <Tab.Screen name="" component={SearchScreen} />
+      <Tab.Screen name="Search" component={SearchScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
-      <Tab.Screen name="Settings" component={SettingsScreen} />
+      <Tab.Screen name="Users" component={UserScreen} />
     </Tab.Navigator>
     
   );

@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "65b2316b-936b-4778-a9a5-96d61ecd49a4",
+		"name": "Backend Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40819902"
+	},
+	"item": [
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "filters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://assignmentbackend-cb2e.onrender.com/api/transactions/all?status=failed&type=debit",
+							"protocol": "https",
+							"host": [
+								"assignmentbackend-cb2e",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"transactions",
+								"all"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "failed"
+								},
+								{
+									"key": "type",
+									"value": "debit"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Paginations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://assignmentbackend-cb2e.onrender.com/api/transactions/all?page=1&limit=5",
+							"protocol": "https",
+							"host": [
+								"assignmentbackend-cb2e",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"transactions",
+								"all"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Transactions for a User by User ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://assignmentbackend-cb2e.onrender.com/api/transactions/user/677986bd309c89cd628f0f43",
+							"protocol": "https",
+							"host": [
+								"assignmentbackend-cb2e",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"transactions",
+								"user",
+								"677986bd309c89cd628f0f43"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Transactions with User Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://assignmentbackend-cb2e.onrender.com/api/transactions/all",
+							"protocol": "https",
+							"host": [
+								"assignmentbackend-cb2e",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"transactions",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://assignmentbackend-cb2e.onrender.com/api/users/677986bd309c89cd628f0f43",
+							"protocol": "https",
+							"host": [
+								"assignmentbackend-cb2e",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"677986bd309c89cd628f0f43"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
