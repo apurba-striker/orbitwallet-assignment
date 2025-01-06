@@ -20,11 +20,11 @@ A Node.js backend application to manage users and transactions, using MongoDB fo
 
 ### 1. Clone the Repository
 
-\`\`\`bash
+`bash
 
 git clone https://github.com/apurba-striker/orbitwallet-assignment/tree/main/backend
 
-cd backend
+cd backend `
 
 ### 2\. Install Dependencies
 
